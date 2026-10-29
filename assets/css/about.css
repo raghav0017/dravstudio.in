@@ -1,20 +1,81 @@
 /* DRAV Studio: about page styles */
-.team { display: flex; flex-wrap: wrap; gap: 20px; }
-.team > * { flex: 1 1 calc((100% - 3 * 20px) / 4 - 1px); min-width: 0; }
-.avatar { width: 72px; height: 72px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 1.7rem; letter-spacing: -0.04em; }
-.av1 { background: #7357FF; color: #FFFFFF; }
-.av2 { background: #FF6B5B; color: #15162B; }
-.av3 { background: #D5FF64; color: #15162B; }
-.av4 { background: #0A0A0B; color: #E8E3FF; }
-.chip-list { display: flex; flex-wrap: wrap; gap: 12px; }
-.chip-list li { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; padding: 12px 20px; border: 1px solid #2A2A31; border-radius: 999px; transition: border-color .15s ease, color .15s ease, background-color .15s ease; }
-.chip-list li:hover { border-color: #D5FF64; color: #D5FF64; }
-.chip-list li.f { background: #D5FF64; border-color: #D5FF64; color: #15162B; }
-.chip-list li.f:hover { background: #C4F04A; color: #15162B; }
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.team > * {
+  flex: 1 1 calc((100% - 3 * 20px) / 4 - 1px);
+  min-width: 0;
+}
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: -0.04em;
+}
+.av1 {
+  background: #7357ff;
+  color: #ffffff;
+}
+.av2 {
+  background: #ff6b5b;
+  color: #15162b;
+}
+.av3 {
+  background: #d5ff64;
+  color: #15162b;
+}
+.av4 {
+  background: #0a0a0b;
+  color: #e8e3ff;
+}
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.chip-list li {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.95rem;
+  padding: 12px 20px;
+  border: 1px solid #2a2a31;
+  border-radius: 999px;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+.chip-list li:hover {
+  border-color: #d5ff64;
+  color: #d5ff64;
+}
+.chip-list li.f {
+  background: #d5ff64;
+  border-color: #d5ff64;
+  color: #15162b;
+}
+.chip-list li.f:hover {
+  background: #c4f04a;
+  color: #15162b;
+}
 /* ===== max-width breakpoints, widest to narrowest ===== */
 @media (max-width: 1040px) {
-  .team > :nth-child(n) { flex: 1 1 calc((100% - 1 * 20px) / 2 - 1px); min-width: 0; }
+  .team > :nth-child(n) {
+    flex: 1 1 calc((100% - 1 * 20px) / 2 - 1px);
+    min-width: 0;
+  }
 }
 @media (max-width: 620px) {
-  .team > :nth-child(n) { flex: 1 1 100%; min-width: 0; }
+  .team > :nth-child(n) {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
 }
