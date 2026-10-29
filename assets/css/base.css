@@ -1061,11 +1061,11 @@ a {
   border-bottom: 1px solid #2a2a31;
 }
 .principle h3 {
-  font-size: 7rem;
-  font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 0.98;
-  transition: color 0.2s ease;
+	font-size: 6rem;
+	font-weight: 800;
+	letter-spacing: -0.045em;
+	line-height: 0.98;
+	transition: color 0.2s ease;
 }
 .principle p {
   color: #a8a8b8;
