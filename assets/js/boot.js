@@ -5,7 +5,7 @@
     if (document.querySelector('.ptx')) return;
     var pt = document.createElement('div');
     pt.className = 'ptx'; pt.setAttribute('aria-hidden', 'true');
-    pt.innerHTML = '<i></i><div class="ptx-logo"> <img src="/assets/images/drav-main-logo.webp" alt=""> </div>';
+    pt.innerHTML = '<i></i>div class="ptx-logo"><img src="assets/images/drav-logo-main.webp" alt="">  </div>';
     root.appendChild(pt);
     return pt;
   }
