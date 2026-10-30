@@ -4096,7 +4096,8 @@ html.has-smooth {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* background: url("logo.png") center / contain no-repeat; */
+    opacity: 0;
+	background: url("../images/drav-logo-main.webp") center / contain no-repeat; 
   }
   .ptx-logo img {
     display: block;
