@@ -1,3 +1,5 @@
+
+
 /* DRAV Studio: shared styles (reset, type, nav, buttons, footer, shared sections, effects) */
 /* Layout: alternating true-black and light bands on one 1200px grid. Black = #0A0A0B, raised #151518, border #2A2A31. */
 html {
@@ -4053,3 +4055,103 @@ html.has-smooth {
     width: 38px;
   }
 }
+
+
+ .ptx {
+  display: none;
+} 
+@media (prefers-reduced-motion: no-preference) {
+  .ptx {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9990;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ptx i {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #0a0a0b;
+    box-shadow: 0 -8px 0 #d5ff64;
+    transform: translateY(101%);
+  }
+  /* LOGO SLOT: centred on the curtain. Put an <img> inside .ptx-logo in boot.js,
+         or uncomment the background line below and set your logo path. */
+  .ptx-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* background: url("logo.png") center / contain no-repeat; */
+  }
+  .ptx-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  @keyframes ptUp {
+    from {
+      transform: translateY(101%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes ptAway {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-101%);
+    }
+  }
+  @keyframes ptLogoIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes ptLogoOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  html.pt-out .ptx i {
+    animation: ptUp 0.48s cubic-bezier(0.7, 0, 0.2, 1) forwards;
+  }
+  html.pt-out .ptx-logo {
+    animation: ptLogoIn 0.3s ease 0.25s forwards;
+  }
+  html.pt-in .ptx i {
+    transform: translateY(0);
+    box-shadow: 0 8px 0 #d5ff64;
+    animation: ptAway 0.65s cubic-bezier(0.7, 0, 0.2, 1) 0.1s forwards;
+  }
+  html.pt-in .ptx-logo {
+    opacity: 1;
+    animation: ptLogoOut 0.25s ease 0.02s forwards;
+  }
+}
+/* ===== HERO GRAPHIC: cursor interaction ===== */
